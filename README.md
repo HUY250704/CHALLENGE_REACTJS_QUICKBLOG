@@ -1,8 +1,24 @@
 # QuickBlog
 
+<p align="center">
+  <img src="public/logo-lGLL0Zb0.png" alt="QuickBlog logo" width="160" />
+</p>
+
 QuickBlog là ứng dụng blog được xây dựng bằng React 19 và Vite cho frontend challenge. Ứng dụng cho phép người dùng xem bài viết, tìm kiếm blog, đăng ký/đăng nhập, tạo bài viết với ảnh Cloudinary và nội dung rich text, quản lý bài viết cá nhân, đồng thời hỗ trợ trang quản lý người dùng cho admin.
 
 ## Website mẫu: https://test-fe-blog-reactjs.vercel.app
+
+## GitHub link preview
+
+Để khi gửi link GitHub repo có hình preview, hãy dùng logo `public/logo-lGLL0Zb0.png` làm ảnh Social preview:
+
+1. Mở repository trên GitHub.
+2. Vào `Settings` -> `General`.
+3. Kéo xuống mục `Social preview`.
+4. Upload file `public/logo-lGLL0Zb0.png`.
+5. Lưu lại và gửi lại link repo.
+
+Lưu ý: `og:image` trong `index.html` chỉ ảnh hưởng link website deploy. Link GitHub repo dùng ảnh Social preview trong phần Settings của GitHub.
 
 ## Công nghệ sử dụng
 
@@ -207,5 +223,4 @@ Create post body:
 - Khi API trả `401`, app xóa token, đồng bộ logout và yêu cầu đăng nhập lại.
 - Có thể bật mock API bằng `VITE_USE_MOCK_API=true` để test giao diện không cần backend.
 - File logo trong `public/logo-lGLL0Zb0.png` được dùng cho SEO `og:image`.
-
 
