@@ -15,4 +15,6 @@ Port 3001 is in use, trying another one...
   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.181.1:[1m3002[22m/[39m
   [32m➜[39m  [1mNetwork[22m: [2m10:21:52 AM[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
 [2m10:21:52 AM[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
-[2m10:21:53 AM[2m11:11:53 AM[22m [36m[1m[vite][22m[39m [[2m11:11:53 AM[22m [36m[1m[vite][22m[[2m11:11:53 AM[22m [36m[1m[vite][22m[39m se[2m11:11:53 AM[2m2:47:44 PM[22m [36m[1m[vite][22m[39m [9[2m2:47:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m10:21:53 AM[2m11:11:53 AM[22m [36m[1m[vite][22m[39m [[2m11:11:53 AM[22m [36m[1m[vite][22m[[2m11:11:53 AM[22m [36m[1m[vite][22m[39m se[2m11:11:53 AM[2m2:47:44 PM[22m [36m[1m[vite][22m[39m [9[2m2:47:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22[2m3:48:38 PM[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
+[2m3:48:39 PM[22m [36m[1m[vite][22m[39m [3[2m3:48:39 PM[22m [36m[1m[vite][22m[[2m3:48:39 PM[22m [36m[1m[vite][22m[39m server restarted.
+[22m [36m[1m[vite][22m[39m server restarted.
