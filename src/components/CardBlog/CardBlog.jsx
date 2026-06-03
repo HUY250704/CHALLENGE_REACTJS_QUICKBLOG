@@ -50,7 +50,7 @@ export default function CardBlog({ post }) {
         </Link>
 
         <div
-          className={`group/actions absolute right-2 top-2 z-30 flex flex-col items-end gap-1.5 transition duration-300 ${
+          className={`group/actions absolute right-2 top-2 z-30 h-[84px] w-10 transition duration-300 ${
             menuOpen
               ? "translate-x-0 translate-y-0 opacity-100"
               : "pointer-events-none translate-x-3 -translate-y-3 opacity-0 group-hover:pointer-events-auto group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-x-0 group-focus-within:translate-y-0 group-focus-within:opacity-100"
@@ -58,24 +58,22 @@ export default function CardBlog({ post }) {
         >
           <a
             href={googleSearchUrl}
-            className="grid h-9 w-9 place-items-center rounded-full border border-yellow-200/80 bg-yellow-100/85 text-blue-600 shadow-lg shadow-slate-900/20 backdrop-blur transition hover:border-white/90 hover:bg-white hover:text-blue-700"
+            className="absolute right-0 top-0 z-20 grid h-10 w-10 place-items-center rounded-full border border-blue-100 bg-white text-blue-600 shadow-md shadow-slate-900/20 transition duration-200 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
             aria-label={`Search ${post.title} image on Google`}
             onClick={() => setMenuOpen(false)}
           >
-            <ScanSearch className="h-5 w-5" />
+            <ScanSearch className="h-5 w-5 stroke-[2.2]" />
           </a>
 
           <button
             type="button"
-            className={`grid h-9 w-9 place-items-center rounded-full border border-yellow-200/80 bg-yellow-100/85 text-blue-600 shadow-lg shadow-slate-900/20 backdrop-blur transition duration-200 hover:border-white/90 hover:bg-white hover:text-blue-700 ${
-              menuOpen
-                ? "translate-y-0 opacity-100"
-                : "pointer-events-none -translate-y-1 opacity-0 group-hover/actions:pointer-events-auto group-hover/actions:translate-y-0 group-hover/actions:opacity-100 group-focus-within/actions:pointer-events-auto group-focus-within/actions:translate-y-0 group-focus-within/actions:opacity-100"
+            className={`absolute right-0 top-0 z-10 grid h-10 w-10 place-items-center rounded-full border border-white/60 bg-white/55 text-blue-500/70 opacity-0 shadow-sm shadow-slate-900/10 backdrop-blur-md transition duration-200 hover:bg-white/75 hover:text-blue-600/85 hover:opacity-95 group-hover/actions:translate-y-11 group-hover/actions:opacity-80 group-focus-within/actions:translate-y-11 group-focus-within/actions:opacity-80 ${
+              menuOpen ? "translate-y-11 opacity-80" : ""
             }`}
             aria-label={`Open actions for ${post.title}`}
             onClick={() => setMenuOpen((value) => !value)}
           >
-            <MoreHorizontal className="h-6 w-6 stroke-[2.5]" />
+            <MoreHorizontal className="h-6 w-6 stroke-[1.9]" />
           </button>
 
           {menuOpen && (
