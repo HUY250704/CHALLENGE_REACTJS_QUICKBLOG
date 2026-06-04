@@ -57,7 +57,7 @@ export default function Header() {
                   <>
                     <MenuLink to="/create" icon={SquarePen} label="Create Blog" className="sm:hidden" />
                     <MenuLink to="/mypost" icon={ClipboardList} label="My Posts" />
-                    {isAdmin && <MenuLink to="/admin" icon={Users} label="User Management" />}
+                    {isAdmin && <MenuLink to="/user-management" icon={Users} label="User Management" />}
                     <DropdownMenu.Item
                       onClick={logout}
                       className="flex h-9 cursor-pointer items-center gap-3 rounded-md px-2.5 text-sm font-normal text-slate-950 outline-none hover:bg-slate-50 dark:text-slate-100 dark:hover:bg-slate-800"
