@@ -6,20 +6,36 @@ const fallbackImage =
 
 export default function BlogPostDetail({ post }) {
   return (
-    <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-      <div className="mb-6 flex flex-wrap gap-2">
+    <article className="mx-auto max-w-3xl px-5 pb-12 pt-2 sm:px-6 sm:pt-6">
+      <div className="mb-4 text-center text-sm font-semibold text-indigo-600 sm:text-base">
+        Published on <time>{formatDate(post.createdAt)}</time>
+      </div>
+
+      <h1 className="mx-auto mb-4 max-w-2xl text-center text-2xl font-bold leading-snug tracking-normal text-black dark:text-white sm:text-4xl">
+        {post.title}
+      </h1>
+
+      <div className="mb-10 flex flex-wrap justify-center gap-2 sm:mb-12">
         {(post.tags || []).map((tag) => (
-          <Badge key={tag}>{tag}</Badge>
+          <Badge
+            key={tag}
+            className="border border-indigo-200 bg-white px-4 py-1 text-indigo-600 dark:border-indigo-800 dark:bg-slate-950"
+          >
+            {tag}
+          </Badge>
         ))}
       </div>
-      <h1 className="mb-5 text-3xl font-bold leading-tight text-slate-950 dark:text-white sm:text-5xl">{post.title}</h1>
-      <div className="mb-8 flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
-        <span>By {post.author?.username || "Unknown author"}</span>
-        <span>•</span>
-        <time>{formatDate(post.createdAt)}</time>
-      </div>
-      <img src={post.image || fallbackImage} alt={post.title} className="mb-10 aspect-[16/8] w-full rounded-lg object-cover" />
-      <div className="prose-content text-slate-700 dark:text-slate-200" dangerouslySetInnerHTML={{ __html: post.content || "" }} />
+
+      <img
+        src={post.image || fallbackImage}
+        alt={post.title}
+        className="mx-auto mb-9 max-h-[26rem] max-w-full rounded-[1.25rem] object-contain sm:mb-10"
+      />
+
+      <div
+        className="prose-content mx-auto max-w-2xl text-left text-base leading-7 text-black dark:text-slate-100"
+        dangerouslySetInnerHTML={{ __html: post.content || "" }}
+      />
     </article>
   );
 }

@@ -1,8 +1,8 @@
 export function formatDate(date) {
   if (!date) return "Unknown date";
   return new Intl.DateTimeFormat("en", {
-    day: "2-digit",
-    month: "short",
+    day: "numeric",
+    month: "long",
     year: "numeric",
   }).format(new Date(date));
 }

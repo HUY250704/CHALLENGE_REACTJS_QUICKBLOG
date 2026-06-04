@@ -1,5 +1,5 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { ClipboardList, LogOut, Moon, Sun, User, Users } from "lucide-react";
+import { ClipboardList, LogOut, Moon, Plus, SquarePen, Sun, User, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "@/assets/logo-lGLL0Zb0.png";
@@ -18,20 +18,23 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-transparent bg-white/90 backdrop-blur dark:bg-slate-950/90">
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-3 sm:h-24 sm:px-6">
         <Link to="/" className="flex items-center" aria-label="QuickBlog home">
-          <img src={logo} alt="QuickBlog" className="h-12 w-auto" />
+          <img src={logo} alt="QuickBlog" className="h-10 w-auto sm:h-12" />
         </Link>
 
-        <div className="flex items-center gap-3 sm:gap-5">
-          <Button asChild className="hidden h-9 rounded-md px-3 text-sm sm:inline-flex">
-            <Link to="/create">Create Blog</Link>
+        <div className="flex items-center gap-2 sm:gap-5">
+          <Button asChild className="h-8 rounded-md px-3 text-xs font-bold sm:h-9 sm:text-sm">
+            <Link to="/create">
+              <Plus className="h-4 w-4" />
+              Create Blog
+            </Link>
           </Button>
 
           <Button
             variant="ghost"
             size="icon"
-            className="h-11 w-11 text-slate-950 hover:bg-transparent dark:text-slate-50"
+            className="h-9 w-9 text-slate-950 hover:bg-transparent dark:text-slate-50 sm:h-11 sm:w-11"
             onClick={() => setDark((value) => !value)}
             aria-label="Toggle dark mode"
           >
@@ -40,7 +43,7 @@ export default function Header() {
 
           <DropdownMenu.Root>
             <DropdownMenu.Trigger asChild>
-              <Button variant="outline" size="icon" className="h-11 w-[3.25rem] rounded-lg" aria-label="Open user menu">
+              <Button variant="outline" size="icon" className="h-9 w-9 rounded-lg sm:h-11 sm:w-[3.25rem]" aria-label="Open user menu">
                 <User className="h-5 w-5" />
               </Button>
             </DropdownMenu.Trigger>
@@ -52,7 +55,7 @@ export default function Header() {
               >
                 {isAuthenticated ? (
                   <>
-                    <MenuLink to="/create" label="Create Blog" className="sm:hidden" />
+                    <MenuLink to="/create" icon={SquarePen} label="Create Blog" className="sm:hidden" />
                     <MenuLink to="/mypost" icon={ClipboardList} label="My Posts" />
                     {isAdmin && <MenuLink to="/admin" icon={Users} label="User Management" />}
                     <DropdownMenu.Item
@@ -64,7 +67,7 @@ export default function Header() {
                   </>
                 ) : (
                   <>
-                    <MenuLink to="/create" label="Create Blog" className="sm:hidden" />
+                    <MenuLink to="/create" icon={SquarePen} label="Create Blog" className="sm:hidden" />
                     <MenuLink to="/mypost" icon={ClipboardList} label="My Posts" />
                     <MenuLink to="/signup" icon={User} label="Sign Up" />
                   </>
