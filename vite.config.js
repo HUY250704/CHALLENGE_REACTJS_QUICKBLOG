@@ -27,12 +27,12 @@ VitePWA({
         theme_color: '#ffffff',
         icons: [
           {
-            src: 'public/pwa-logo.png', // Bạn phải chuẩn bị icon này trong thư mục public
+            src: 'pwa-logo.png', // Bạn phải chuẩn bị icon này trong thư mục public
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'public/pwa-logo.png.png', // Bạn phải chuẩn bị icon này trong thư mục public
+            src: 'pwa-logo.png', // Bạn phải chuẩn bị icon này trong thư mục public
             sizes: '512x512',
             type: 'image/png'
           }
