@@ -54,7 +54,7 @@ export default function Home() {
           }}
         >
           <Input
-            className="h-8 min-w-0 border-0 px-3 text-[11px] shadow-none focus:border-0 focus:ring-0 sm:h-12 sm:px-4 sm:text-sm"
+            className="h-9 min-w-0 border-0 px-3 text-base shadow-none focus:border-0 focus:ring-0 sm:h-12 sm:px-4 sm:text-sm"
             placeholder="Enter search title..."
             value={query}
             onChange={(event) => setQuery(event.target.value)}

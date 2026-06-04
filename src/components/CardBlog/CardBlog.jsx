@@ -77,7 +77,7 @@ export default function CardBlog({ post }) {
           </button>
 
           {menuOpen && (
-            <div className="absolute left-full top-10 z-50 ml-2 w-80 translate-x-1 rounded-xl bg-neutral-900 p-3 text-white shadow-2xl shadow-slate-950/35 ring-1 ring-white/10">
+            <div className="absolute right-0 top-[5.75rem] z-50 w-[calc(100vw-3rem)] max-w-72 rounded-xl bg-neutral-900 p-3 text-white shadow-2xl shadow-slate-950/35 ring-1 ring-white/10 sm:left-full sm:right-auto sm:top-10 sm:ml-2 sm:w-80 sm:max-w-none sm:translate-x-1">
               <MenuAction icon={ImagePlus} label="Chỉnh sửa hình ảnh" as="a" href={googleSearchUrl} onClick={() => setMenuOpen(false)} />
               <MenuAction icon={ZoomIn} label="Phóng to hình ảnh" onClick={openImage} />
               <MenuAction icon={EyeOff} label="Tắt cho site này" onClick={() => showMessage("Đã tắt gợi ý cho site này")} />
